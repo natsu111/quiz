@@ -12,6 +12,8 @@
   <body>
   <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
+       <%= link_to "サインアップ", new_user_registration_path %>
+       <%= link_to "ログイン", new_user_session_path %>
     <%= yield %>
   </body>
 </html>
