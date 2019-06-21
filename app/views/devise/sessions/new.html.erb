@@ -26,5 +26,47 @@
 <%= render "devise/shared/links" %>
 
 <p>下記の情報をフォームに入力してログインしてください</p>
-<p>Email: kame@kame.com</p>
-<p>Password: kamekame</p>
+<p>[Email]</p>
+<p>
+<!-- The text field -->
+<input type="text" value="kame@kame.com" id="myInput">
+
+<!-- The button used to copy the text -->
+<button onclick="myFunction()">Copy text</button>
+</p>
+
+<p>[Password]</p>
+<p>
+<input type="text" value="kamekame" id="myInputPass">
+
+<!-- The button used to copy the text -->
+<button onclick="myCopy()">Copy text</button>
+</p>
+
+
+
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+}
+function myCopy() {
+  /* Get the text field */
+  var copyPass = document.getElementById("myInputPass");
+
+  /* Select the text field */
+  copyPass.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+
+}
+</script>
